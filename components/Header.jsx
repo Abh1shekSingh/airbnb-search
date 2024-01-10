@@ -45,12 +45,7 @@ const Header = ({placeholder}) => {
       });
     };
   
-    const handleCountrySelect = (country) => {
-      setSelectedCountry(country);
-      setSearch('');
-      setCountries([]); // Hide the dropdown after selection
-    };
-  
+   
     const selectionRanges = {
       startDate: startDate,
       endDate: endDate,
@@ -72,19 +67,7 @@ const Header = ({placeholder}) => {
               type="text"
               placeholder={placeholder || 'Start your search'}
             />
-            {/* {countries.length > 0 && (
-              <div className="absolute top-full left-0 bg-white w-full border-2 rounded-b-md z-10">
-                {countries.map((country, index) => (
-                  <div
-                    key={index}
-                    className="cursor-pointer py-2 px-4 hover:bg-gray-100"
-                    onClick={() => handleCountrySelect(country)}
-                  >
-                    {country}
-                  </div>
-                ))}
-              </div>
-            )} */}
+          
             <span className='hidden md:inline-flex text-white flex justify-center items-center bg-red-400 cursor-pointer rounded-full p-2 md:mx-2'>
               <CiSearch />
             </span>

@@ -9,7 +9,6 @@ import { hotelsData } from '@/data/hotelData'
 
 const Listing = () => {
     const router = useRouter();
-    const [filteredHotels, setFilteredHotels] = useState([]);
     
         const { location, startDate, endDate } = router.query;
         const formattedStartDate = new Date(startDate).toLocaleDateString('en-GB', {
@@ -25,8 +24,10 @@ const Listing = () => {
 
         const range = `${formattedStartDate} - ${formattedEndDate}`;
 
-        // Filter hotels based on the selected country (location)
-        const hotelsForSelectedCountry = hotelsData.find(hotel => hotel.country.toLowerCase() === location.toLowerCase());
+
+        const hotelsForSelectedCountry = hotelsData.find(hotel => hotel.country.toLowerCase() === location?.toLowerCase());
+        console.log(hotelsForSelectedCountry)
+
 
         if(!hotelsForSelectedCountry) {
             return <div>
