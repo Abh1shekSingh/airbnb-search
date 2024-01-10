@@ -63,7 +63,7 @@ const Listing = () => {
                         }
                     </div>
                 </section>
-                <section className='inline-flex xl:min-w-[600px]'>
+                <section className='inline-flex xl:min-w-[800px] overflow-hidden'>
                     <Map AllHotels={hotelsForSelectedCountry.hotels} />
                 </section>
             </main>
