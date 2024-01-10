@@ -11,7 +11,7 @@ import { useMediaQuery } from 'react-responsive';
 import { useRouter } from 'next/router';
 
 
-const Header = () => {
+const Header = ({placeholder}) => {
     const router = useRouter();
     const [search, setSearch] = useState('');
     const [startDate, setStartDate] = useState(new Date());
@@ -52,7 +52,7 @@ const Header = () => {
                 <Image src={logoMobile} alt="logoMobile" width={30} className='md:hidden' />
             </div>
             <div className='flex items-center justify-center rounded-full py-2 md:border-2 md:shadow-sm'>
-                <input value={search} onChange={(e) => setSearch(e.target.value)} className='flex-grow pl-5 bg-transparent outline-none' type="text" placeholder='Start your search' />
+                <input value={search} onChange={(e) => setSearch(e.target.value)} className='flex-grow pl-5 bg-transparent outline-none' type="text" placeholder={placeholder || 'Start your search'} />
                 <span className='hidden md:inline-flex text-white flex justify-center items-center bg-red-400 cursor-pointer rounded-full p-2 md:mx-2'>
                     <CiSearch />
                 </span>
