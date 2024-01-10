@@ -18,7 +18,7 @@ const Hotelinfo = ({img, title, location,description, star, price, total}) => {
 
         <h4 className='text-xl font-semibold'>{title}</h4>
         <div className='border-b w-10 pt-2' />
-        <p className='text-gray-400'>{description}</p>
+        <p className='text-gray-400 text-xs'>{description}</p>
         <div className='flex justify-between items-end pt-5'>
           <p className='flex items-center space-x-2'>
             <CiStar />
