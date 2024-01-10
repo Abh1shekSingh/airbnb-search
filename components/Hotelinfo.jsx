@@ -3,6 +3,19 @@ import Image from 'next/image'
 import React from 'react'
 import {CiHeart, CiStar} from "react-icons/ci"
 import dummy from "../public/banner.jpg"
+import { Lato, Saira } from 'next/font/google'
+
+ 
+const lato = Lato({
+  weight: ['400'],
+  subsets: ['latin'],
+})
+
+const saira = Saira({
+    weight: [ '700'],
+    subsets: ['latin'],
+})
+
 
 const Hotelinfo = ({img, title, location,description, star, price, total}) => {
   return (
@@ -12,19 +25,19 @@ const Hotelinfo = ({img, title, location,description, star, price, total}) => {
       </div>
       <div className='flex flex-col flex-grow pl-5'>
         <div className='flex justify-between items-center'>
-          <p className='text-xs text-gray-400'>{location}</p>
+          <p className={`text-xs text-gray-400 ${lato.className}`}>{location}</p>
           <CiHeart />
         </div>
 
-        <h4 className='text-xl font-semibold'>{title}</h4>
+        <h4 className={`${saira.className} text-xl font-semibold`}>{title}</h4>
         <div className='border-b w-10 pt-2' />
-        <p className='text-gray-400 text-xs'>{description}</p>
+        <p className={`${lato.className} text-gray-400 text-xs`}>{description}</p>
         <div className='flex justify-between items-end pt-5'>
-          <p className='flex items-center space-x-2'>
+          <p className={`${lato.className} flex items-center space-x-2`}>
             <CiStar />
             <p>{star}</p>
           </p>
-          <div>
+          <div className={`${lato.className}`}>
             <p className='font-semibold'>{price}</p>
             <p className='text-sm flex justify-end'>{total}</p>
           </div>

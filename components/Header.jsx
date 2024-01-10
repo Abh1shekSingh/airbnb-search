@@ -53,12 +53,16 @@ const Header = ({placeholder}) => {
     };
 
     return (
+      <>
+        <div className='bg-red-400 flex items-center justify-center p-2'>
+          <p className='text-center text-white italic'>Available Countries - France, Italy, United Kingdom and Spain!</p>
+        </div>
         <header className='sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10'>
           <div className='relative flex items-center cursor-pointer my-auto'>
                 <Image onClick={() => router.push("/")} className='hidden md:block' src={logo} alt="logo" width={100} />
                 <Image src={logoMobile} alt="logoMobile" width={30} className='md:hidden' />
           </div>
-          <div className='flex items-center justify-center  py-2 md:border-2 md:shadow-sm relative'>
+          <div className='flex items-center justify-center rounded-full py-2 md:border-2 md:shadow-sm relative'>
             <input
               value={selectedCountry || search}
               onChange={(e) => setSearch(e.target.value)}
@@ -96,6 +100,7 @@ const Header = ({placeholder}) => {
             </div>
           )}
         </header>
+        </>
       );
 }
 

@@ -1,6 +1,7 @@
 export const hotelsData = [
     {
       "country": "United Kingdom",
+      "flag":"https://img.freepik.com/premium-vector/national-flag-united-kingdom-icon-nation_395514-40.jpg?size=626&ext=jpg&ga=GA1.1.1412446893.1704844800&semt=ais",
       "hotels": [
         {
           "img": "https://links.papareact.com/xqj",
@@ -50,6 +51,7 @@ export const hotelsData = [
     },
     {
       "country": "France",
+      "flag":"https://i.pinimg.com/736x/24/ba/06/24ba068ceb093840e2c9a95da1e4114c.jpg",
       "hotels": [
         {
           "img": "https://links.papareact.com/xhc",
@@ -99,6 +101,7 @@ export const hotelsData = [
     },
     {
       "country": "Spain",
+      "flag":"https://img.freepik.com/free-vector/illustration-spain-flag_53876-18168.jpg",
       "hotels": [
         {
           "img": "https://links.papareact.com/8w2",
@@ -148,6 +151,7 @@ export const hotelsData = [
     },
     {
       "country": "Italy",
+      "flag":"https://www.flagcolorcodes.com/images/gif/italy.gif",
       "hotels": [
         {
           "img": "https://links.papareact.com/pro",
